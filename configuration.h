@@ -1,0 +1,8 @@
+#define SENSOR_PORT 2
+#define GREEN_PORT 12
+
+#define WIFI_NAME "Volya"
+#define WIFI_PASSWORD "SocSocovich"
+
+#define ONION_REDIS_API_GATEWAY_IP "34.239.11.167"
+#define ONION_REDIS_API_GATEWAY_PORT 81
