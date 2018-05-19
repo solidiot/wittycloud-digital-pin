@@ -13,6 +13,20 @@ void setup() {
   Serial.println();
   Serial.println("ESP8266 digital pin will start");
   Serial.setDebugOutput(true);
+
+  // Connect to WiFi
+  // TODO: Whether need to connect only once? How to reconnect in case of errors?
+  WiFi.mode(WIFI_STA);
+  WiFi.begin("Volya", "SocSocovich");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("*");
+  }
+
+  Serial.println();
+  Serial.println("Connected to WiFi:");
+  Serial.println(WiFi.localIP());
+  Serial.println(WiFi.macAddress());  
 }
 
 void loop() {
