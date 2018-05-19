@@ -48,16 +48,6 @@ void loop() {
       Serial.println("Connected to Web server");
       // client.println("POST /SolidIoT/WittyCloudDigitalPin/PIRMotion HTTP/1.1");
       client.println("POST /test/Echo/echo HTTP/1.0");
-      client.println("Accept: */*");
-      client.println("Accept-Encoding: gzip, deflate");
-      client.println("Accept-Language: en-US,en;q=0.5");
-      client.println("Connection: close");
-      client.println("Content-Type: application/x-www-form-urlencoded; charset=UTF-8");
-      client.println("User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0");
-      client.println("X-Requested-With: XMLHttpRequest");
-      client.print("Host: ");
-      client.print(ONION_REDIS_API_GATEWAY_IP);
-      client.println(":81");
       client.println("Content-Length: 2");
       client.println();
       client.println("{}");
